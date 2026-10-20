@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="night">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANDERGO · Fly Me to the World 旅游攻略打卡平台</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ 导航 ============ -->
+<!-- ============ 左侧导航栏 ============ -->
+<aside class="sidebar">
+  <button class="sb-toggle" id="sbToggle" title="收起 / 展开导航">«</button>
+  <a class="logo" href="#home">
+    <span class="tile"><svg viewBox="0 0 24 24"><path d="M21.5 5.6c-.5-1-1.8-1.4-2.8-.9l-4.3 2.3-8.1-3.4c-.5-.2-1.1-.1-1.5.2l-.9.8c-.5.4-.4 1.2.2 1.5l6.5 3.3-3.7 2-2.9-.6c-.4-.1-.8 0-1.1.3l-.7.6c-.4.4-.3 1 .2 1.2l3.3 1.9 1.9 3.3c.3.5 1 .6 1.3.2l.6-.7c.3-.3.4-.7.3-1.1l-.6-2.9 3.7-2 3.3 6.5c.3.5 1.1.6 1.5.2l.8-.9c.3-.4.4-1 .2-1.5l-3.4-8.1 2.3-4.3c.5-.9.3-2.1-.6-2.6z" transform="scale(.9) translate(1.3,1.3)"/></svg></span>
+    <span><b>WANDERGO</b><i>你的故事旅行宇宙</i></span>
+  </a>
+  <button class="sb-search" id="searchOpen">🔍<span>搜索景点 / 视频 / 笔记…</span><kbd>Ctrl K</kbd></button>
+  <div class="side-links" id="navLinks">
+    <a href="#home" class="on"><span class="ni">🏠</span>旅行首页</a>
+    <a href="#novel"><span class="ni">📖</span>跟着小说去旅行</a>
+    <a href="#prince"><span class="ni">👑</span>跟着小王子去旅行</a>
+    <a href="#map"><span class="ni">🌍</span>环球地图</a>
+    <a href="#ai"><span class="ni">🤖</span>AI 旅行规划</a>
+    <a href="#community"><span class="ni">💬</span>旅行社区</a>
+    <a href="#checkin"><span class="ni">📍</span>我的打卡</a>
+    <a href="#memories"><span class="ni">🎬</span>旅行纪念视频</a>
+    <a href="#workbench"><span class="ni">🧳</span>旅行工作台</a>
+  </div>
+  <div class="side-foot">
+    <div class="nav-tools">
+      <span class="avatar-chip" id="avatarChip"><span class="av" id="avatarTxt">旅</span><span id="avatarName">旅行者</span></span>
+      <button class="btn gold" id="navLoginBtn">登录 / 注册</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ Hero ============ -->
+<header class="hero" id="home">
+  <div class="stars"></div><div class="stars2"></div><div class="moon"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-kicker">WANDERGO · FLY ME TO THE WORLD</div>
+      <h1>Fly Me to <em>the World</em></h1>
+      <p class="sub">AI 帮你规划 → 地图带你走 → 真实打卡 → 记录花费与感受 → 自动生成旅行纪念册，再成为别人的真实攻略。</p>
+      <p class="loop"><b>AI</b> 数据分析与全网攻略抓取 · <b>MAP</b> 国内外实景标点 · <b>BGM</b> 打卡视频配乐 · <b>THEME</b> 主题随心换</p>
+      <div class="hero-cta">
+        <button class="btn gold" onclick="document.getElementById('ai').scrollIntoView()">🤖 AI 帮你规划</button>
+        <button class="btn ghost" onclick="document.getElementById('map').scrollIntoView()">🗺 地图带你走</button>
+      </div>
+      <div class="hero-stats">
+        <span>🌍 <b>32</b> 精选国内外景点</span><span>🤖 <b>模块化</b> AI 攻略输出</span><span>📸 <b>真实打卡</b> 社区共建</span><span>🎼 <b>BGM</b> 视频配乐</span>
+      </div>
+    </div>
+    <div class="globe-wrap">
+      <div class="globe-wrap" style="position:relative">
+        <div class="globe">
+          <span class="dotmark" style="top:34%;left:58%"></span>
+          <span class="dotmark" style="top:52%;left:34%;animation-delay:.8s"></span>
+          <span class="dotmark" style="top:66%;left:70%;animation-delay:1.6s"></span>
+        </div>
+        <div class="orbit"><span class="sat"></span></div>
+      </div>
+    </div>
+  </div>
+  <!-- 小王子飞机 -->
+  <div class="plane-scene">
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+    <div class="plane-track"><div class="bob">
+      <svg viewBox="0 0 225 88">
+        <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e3ae"/><stop offset="1" stop-color="#c8973f"/></linearGradient></defs>
+        <line x1="0" y1="46" x2="66" y2="46" stroke="#e7c76d" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round" opacity=".8"/>
+        <g>
+          <path d="M70 46 q22 -12 44 0 q-22 10 -44 0z" fill="url(#pg)" opacity=".9"/>
+          <ellipse cx="128" cy="46" rx="42" ry="12.5" fill="url(#pg)"/>
+          <path d="M104 46 L84 22 L96 20 L118 42 Z" fill="#b57f2e"/>
+          <path d="M168 38 L182 26 L186 30 L176 44 Z" fill="#b57f2e"/>
+          <circle cx="173" cy="46" r="4.5" fill="#1d2434" opacity=".8"/>
+          <rect x="106" y="36" width="34" height="9" rx="4.5" fill="#8fb6e8" opacity=".9"/>
+          <ellipse cx="172" cy="46" rx="5" ry="12" fill="none" stroke="#8a6a2c" stroke-width="2" opacity=".55"/>
+          <g>
+            <rect x="112" y="24" width="15" height="13" rx="5" fill="#5f8f5a"/>
+            <circle cx="119.5" cy="19" r="7" fill="#f7d9a8"/>
+            <circle cx="115.5" cy="14" r="3.4" fill="#e9c56a"/><circle cx="121" cy="12.5" r="3.6" fill="#e9c56a"/><circle cx="125.5" cy="15.5" r="3" fill="#e9c56a"/>
+            <path d="M110 27 q-13 2 -22 8 q11 -1 20 -4z" fill="#e06a5e"/>
+          </g>
+        </g>
+      </svg>
+    </div></div>
+  </div>
+  <svg class="hero-curve" viewBox="0 0 1440 90" preserveAspectRatio="none" style="display:block;width:100%;height:64px"><path fill="currentColor" d="M0,64 C240,10 480,6 720,34 C960,62 1200,66 1440,30 L1440,90 L0,90 Z"/></svg>
+</header>
+
+<!-- ============ 跟着小说去旅行 ============ -->
+<section class="sec" id="novel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">TRAVEL WITH NOVELS</div>
+      <h2>跟着小说去旅行</h2>
+      <p>每一部小说都藏着一座城。点击卡片走进书里的场景，或让 AI 按小说氛围生成整趟旅程。</p>
+    </div>
+    <div class="spot-mini-list">
+      <div class="spot-mini" onclick="openSpot('paris')"><img data-img="paris" alt="巴黎"><div><h5>《悲惨世界》· 巴黎</h5><div class="city">雨果笔下的塞纳河与革命街垒</div><div class="icon-chips"><span class="hl">🗼 埃菲尔铁塔</span><span>📚 文学地标</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('巴黎')">🤖 AI 规划 →</button></div></div></div>
+      <div class="spot-mini" onclick="openSpot('inari')"><img data-img="inari" alt="京都"><div><h5>《古都》· 京都</h5><div class="city">川端康成里的千年寂寂町屋</div><div class="icon-chips"><span class="hl">⛩️ 千本鸟居</span><span>🎎 和风古意</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('日本')">🤖 AI 规划 →</button></div></div></div>
+      <div class="spot-mini" onclick="openSpot('sagrada')"><img data-img="sagrada" alt="巴塞罗那"><div><h5>《风之影》· 巴塞罗那</h5><div class="city">遗忘之书墓园与高迪的迷宫</div><div class="icon-chips"><span class="hl">⛪ 圣家堂</span><span>🕯 书中秘境</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('巴塞罗那')">🤖 AI 规划 →</button></div></div></div>
+      <div class="spot-mini" onclick="openSpot('cp')"><img data-img="cp" alt="纽约"><div><h5>《了不起的盖茨比》· 纽约</h5><div class="city">爵士时代的绿灯与长岛夜宴</div><div class="icon-chips"><span class="hl">🍂 中央公园</span><span>🥂 复古摩登</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('纽约')">🤖 AI 规划 →</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 跟着小王子去旅行 ============ -->
+<section class="sec sec-alt" id="prince">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">TRAVEL WITH THE LITTLE PRINCE</div>
+      <h2>跟着小王子去旅行</h2>
+      <p>「所有的大人都曾经是小孩。」沿着 B612 的航线：落日、玫瑰、狐狸与星空。</p>
+    </div>
+    <div class="spot-mini-list">
+      <div class="spot-mini" onclick="openSpot('oia')"><img data-img="oia" alt="伊亚"><div><h5>一天看 44 次落日 🌅</h5><div class="city">伊亚小镇 · 忧伤时的专属浪漫</div><div class="icon-chips"><span class="hl">🌅 爱琴海落日</span><span>🪐 B612 同款</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('圣托里尼')">🤖 AI 规划 →</button></div></div></div>
+      <div class="spot-mini" onclick="openSpot('ubud')"><img data-img="ubud" alt="乌布"><div><h5>玫瑰与被驯服的花园 🌹</h5><div class="city">乌布梯田 · 「正因为你为玫瑰花费了时间」</div><div class="icon-chips"><span class="hl">🌾 丛林秋千</span><span>🦊 驯养之地</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('巴厘岛')">🤖 AI 规划 →</button></div></div></div>
+      <div class="spot-mini" onclick="openSpot('ice')"><img data-img="ice" alt="冰岛"><div><h5>会说话的星空与狐狸 ❄️</h5><div class="city">黄金圈 · 极光夜是星星的悄悄话</div><div class="icon-chips"><span class="hl">🌌 极光</span><span>✈️ 飞行员航线</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('冰岛')">🤖 AI 规划 →</button></div></div></div>
+      <div class="spot-mini" onclick="openSpot('paris')"><img data-img="paris" alt="巴黎"><div><h5>飞行员的起点 ✈️</h5><div class="city">巴黎 · 圣埃克苏佩里起飞的地方</div><div class="icon-chips"><span class="hl">🗼 故乡坐标</span><span>📜 手稿博物馆</span><button class="more" style="all:unset;cursor:pointer;color:var(--gold);font-size:10.5px" onclick="event.stopPropagation();askAI('巴黎')">🤖 AI 规划 →</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 地图探索 ============ -->
+<section class="sec sec-alt" id="map">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">EXPLORE THE MAP</div>
+      <h2>实景地图 · 景点标点</h2>
+      <p>国内看「大公鸡」中国地图，国外飞向世界地图 —— 红点即热门打卡地，金线是飞行航线痕迹，点击标点查看景点详情。</p>
+    </div>
+    <div class="map-card">
+      <div class="map-top">
+        <div class="map-tabs" id="mapTabs">
+          <button class="on" data-m="cn">🇨🇳 中国地图</button>
+          <button data-m="world">🌍 世界地图 · 环球航线</button>
+        </div>
+        <div class="map-legend"><span><i class="lg-red"></i>热门打卡景点</span><span><i class="lg-line"></i>航线痕迹</span><span>🖱 拖拽缩放 · 点击标点查看详情</span></div>
+      </div>
+      <div id="chinaMap"></div>
+      <div id="worldMap" style="display:none"></div>
+      <div id="mapFallback" class="map-fallback" style="display:none"></div>
+      <div class="map-note">📍 坐标获取方式：高德/百度<b>坐标拾取器</b>（lbs.amap.com/tools/picker）人工校准 · 景点清单含名称、地址、坐标、建议游玩时长与交通衔接 · 本原型地图数据来自 ECharts 在线资源</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI 智能规划 ============ -->
+<section class="sec" id="ai">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">AI TRAVEL PLANNER</div>
+      <h2>AI 智能规划 · 模块化输出</h2>
+      <p>抛出一个问题，AI 经过问题解析 → 爬虫抓取全网攻略 → 数据分析 → 模块化生成：景点、出行方式、价格规划、打卡视频、Plog 推荐，每个模块都可点击进入详情。</p>
+    </div>
+    <div class="ai-hero-box">
+      <div class="ai-title"><span class="spark">✦</span>AI 旅行规划师 · Fly Me Intelligence</div>
+      <p class="ai-sub">示例：「我想去大理玩 3 天，预算 3000，喜欢湖景和慢生活」</p>
+      <div class="ai-input">
+        <input id="aiInput" placeholder="告诉我你的目的地、天数和预算，AI 为你生成模块化攻略…">
+        <button class="btn gold" id="aiGo" style="height:46px;padding:0 26px">✨ 生成规划</button>
+      </div>
+      <div class="ai-chips" id="aiChips">
+        <button>我想去大理玩 3 天，预算 3000</button>
+        <button>成都九寨沟 4 日亲子游</button>
+        <button>日本红叶季 6 天怎么玩</button>
+        <button>巴黎 5 天预算 2 万</button>
+        <button>冰岛极光环岛自驾</button>
+        <button>三亚 4 天海岛度假</button>
+        <button>张家界 4 天怎么玩</button>
+        <button>清迈 5 天慢生活</button>
+        <button>马尔代夫蜜月 5 天</button>
+      </div>
+      <div class="pipeline" id="pipeline">
+        <div class="steps">
+          <div class="step" data-s="0"><span class="ico">🔍</span>理解你的问题</div>
+          <div class="step" data-s="1"><span class="ico">🕷</span>爬虫抓取全网攻略</div>
+          <div class="step" data-s="2"><span class="ico">📊</span>数据清洗与分析</div>
+          <div class="step" data-s="3"><span class="ico">🧩</span>模块化方案生成</div>
+        </div>
+        <div class="pipe-bar"><i id="pipeBar"></i></div>
+      </div>
+      <div class="plan-head" id="planHead"></div>
+      <div class="mod-grid" id="modGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 社区动态 ============ -->
+<section class="sec sec-alt" id="community">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">COMMUNITY</div>
+      <h2>社区动态 · 真实旅行者的攻略</h2>
+      <p>打卡视频带 BGM，Plog 图文故事 —— 每一条真实打卡，都会成为其他人的攻略。</p>
+    </div>
+    <div class="filter-tabs" id="feedTabs">
+      <button class="on" data-f="all">全部</button><button data-f="cn">🇨🇳 国内</button><button data-f="ab">🌍 国外</button><button data-f="video">🎬 打卡视频</button><button data-f="plog">📷 Plog</button>
+    </div>
+    <div class="filter-tabs plat-tabs" id="platTabs">
+      <button class="on" data-p="all">🌐 全部平台</button><button data-p="douyin">🎵 抖音</button><button data-p="xhs">📕 小红书</button><button data-p="kuaishou">⚡ 快手</button><button data-p="ins">📸 Instagram</button><button data-p="yt">▶️ YouTube</button>
+    </div>
+    <div class="blk-head"><h4>✨ 精选 4K 摄影</h4><span class="blk-sub">TOP 级画质 · 点击查看大图</span></div>
+    <div class="feat-strip" id="featStrip"></div>
+    <div class="blk-head"><h4>🔥 话题热度榜</h4><div class="sorter"><button class="mini on" data-s="heat">按热度</button><button class="mini" data-s="up">按涨幅</button><span class="blk-sub">点击话题进入话题社区</span></div></div>
+    <div class="heat-list" id="heatList"></div>
+    <div class="feed-grid" id="feedGrid"></div>
+    <p class="src-note" style="margin-top:16px">📊 声明：本区内容聚合自抖音 / 小红书 / 快手 / Instagram / YouTube 等平台的创作者内容与站内用户真实打卡数据；热度榜单与人群适配图表由 AI 爬虫对全网数据抓取、清洗后加权整理生成，仅供参考。</p>
+  </div>
+</section>
+
+<!-- ============ 打卡 · 纪念册 ============ -->
+<section class="sec" id="checkin">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">CHECK-IN &amp; MEMORY ALBUM</div>
+      <h2>用户打卡 · 自动生成旅行纪念册</h2>
+      <p>上传照片/视频 → 记录实际花费 → 写下感受 → 一键生成纪念册并同步到社区，反向成为他人的真实攻略。</p>
+    </div>
+    <div class="ck-grid">
+      <form class="ck-form" id="ckForm">
+        <h3>📍 新建打卡</h3>
+        <p class="hint">登录后打卡可同步进纪念册与社区（未登录会先弹出登录）</p>
+        <div class="two-col">
+          <div><label class="f-label">目的地 <span class="req">*</span></label><select id="ckDest"></select></div>
+          <div><label class="f-label">打卡日期</label><input type="date" id="ckDate"></div>
+        </div>
+        <label class="f-label">上传照片 / 视频（可多选，图片将存入纪念册）</label>
+        <div class="upzone" id="upZone">📷 点击选择照片或视频 · 支持 JPG / PNG / MP4</div>
+        <input type="file" id="ckFiles" accept="image/*,video/*" multiple style="display:none">
+        <div class="up-previews" id="upPreviews"></div>
+        <label class="f-label">实际花费记录（交通 / 住宿 / 餐饮 / 门票 / 其他）</label>
+        <div id="costRows"></div>
+        <button type="button" class="mini-btn" id="addCost">＋ 添加一笔花费</button>
+        <div class="cost-total"><span>合计</span><span id="costSum">¥ 0</span></div>
+        <label class="f-label">此刻心情</label>
+        <div class="moods" id="moods"><button type="button">🤩 无比震撼</button><button type="button">😍 不虚此行</button><button type="button" class="on">😌 治愈放松</button><button type="button">🥹 值得再来</button></div>
+        <label class="f-label">写下感受（会成为别人的攻略参考）</label>
+        <textarea id="ckText" placeholder="例如：清晨六点的洱海，海鸥和日出一起来了…"></textarea>
+        <label class="f-label">视频 BGM（生成纪念册/视频时自动配乐）</label>
+        <select id="ckBgm"><option value="none">不配 BGM</option><option value="fresh">♪ 清新 · Morning Breeze</option><option value="calm">♪ 宁静 · Moonlit Lake</option><option value="retro">♪ 复古 · Retro Train</option></select>
+        <button type="submit" class="btn gold ck-submit">📸 提交打卡 · 生成纪念册</button>
+      </form>
+      <div id="memories">
+        <div class="sec-head" style="margin-bottom:10px"><h3 style="font-size:16px">🪄 我的旅行纪念册</h3><p style="font-size:12px">每次打卡自动排版成一页纪念册，可随时回看</p></div>
+        <div class="albums-grid" id="albumsGrid"><div class="empty-tip">还没有纪念册 · 提交一次打卡就会自动生成第一页 ✨</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 我的 ============ -->
+<section class="sec sec-alt" id="me">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">MY TRAVEL SPACE</div>
+      <h2>我的 · 旅行空间</h2>
+    </div>
+    <div class="me-grid">
+      <div class="profile-card">
+        <div class="big-av" id="meAv">旅</div>
+        <h3 id="meName">未登录旅行者</h3>
+        <span class="lv" id="meLv">🧭 预览模式</span>
+        <div class="me-stats">
+          <div><b id="msCk">0</b><span>打卡次数</span></div>
+          <div><b id="msCost">¥0</b><span>累计花费</span></div>
+          <div><b id="msCity">0</b><span>足迹目的地</span></div>
+        </div>
+        <div class="mebtns">
+          <button class="btn gold" id="meCkBtn">去打卡</button>
+          <button class="btn line" id="logoutBtn2">退出登录</button>
+        </div>
+      </div>
+      <div class="mylist">
+        <h3>🗂 我的打卡记录</h3>
+        <div id="myCkList"><div class="empty-tip" style="padding:18px">暂无打卡记录</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 旅行工作台 ============ -->
+<section class="sec sec-alt" id="workbench">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">TRAVEL WORKBENCH</div>
+      <h2>🧳 旅行工作台</h2>
+      <p>手账创作 · 协同计划 · 小众文创素材库 —— 让收藏夹下岗的一站式创作与协作台</p>
+    </div>
+    <div class="filter-tabs" id="wbTabs">
+      <button class="on" data-w="journal">📖 手账工坊</button><button data-w="collab">🤝 协同计划</button><button data-w="shops">🎨 文创素材库</button>
+    </div>
+    <div id="wbJournal">
+      <div class="wb-row">
+        <select id="jnSpot"></select>
+        <select id="jnStyle"><option value="draw">✏️ 手绘线稿</option><option value="water">🎨 水彩晕染</option><option value="film">📼 复古胶片</option></select>
+        <button class="btn gold" id="jnGen">🤖 AI 生成手账</button>
+        <button class="btn line" id="jnFree">📷 自由创作</button>
+      </div>
+      <p class="wb-tip">模式① AI 把资料与路线生成旅行手账 · 模式② 把散落的照片、位置、心得重新做成旅行记录 —— 配色与手绘风格按目的地自动推荐，卡片文字点击即可修改，支持单日 / 每日单页 / 全程卡片与图片导出</p>
+      <div class="jn-cards" id="jnCards"><div class="empty-tip">选择目的地与风格，点击「AI 生成手账」或「自由创作」开始 ✍️</div></div>
+    </div>
+    <div id="wbCollab" style="display:none">
+      <div class="wb-row"><span class="wb-mems" id="wbMems"></span><span class="wb-tip" style="margin:0">多人协同 · 共建共享笔记 · 投票决定</span></div>
+      <div class="wb-grid">
+        <div class="wb-panel"><h4>🧾 机酒识别 · 粘贴自动成条</h4>
+          <textarea id="ctInput" rows="4" placeholder="粘贴航班/酒店/火车信息，每行一条，如：&#10;10.20 MU583 上海浦东→巴黎 12:35&#10;巴黎 Hôtel Malte Opera 酒店 10.20-10.23 3晚&#10;G102 高铁 北京南→上海虹桥"></textarea>
+          <button class="btn gold" id="ctParse" style="margin-top:8px">识别成条目</button>
+          <div id="ctList" class="ct-list"></div>
+        </div>
+        <div class="wb-panel"><h4>💰 花费记账 · 自动人均分摊</h4>
+          <div class="wb-row"><input id="exName" placeholder="名目，如 塞纳河游船"><input id="exAmt" type="number" placeholder="金额 ¥" style="max-width:110px"><button class="btn gold" id="exAdd">记账</button></div>
+          <div id="exList" class="ct-list"></div>
+          <div class="ex-total" id="exTotal"></div>
+        </div>
+      </div>
+      <div class="wb-panel" style="margin-top:14px"><h4>🗳 方案投票 · 一起决定去哪玩</h4>
+        <div class="wb-row"><input id="vtInput" placeholder="新提案，如 Day2 去卢浮宫还是奥赛？"><button class="btn gold" id="vtAdd">发起投票</button></div>
+        <div id="vtList" class="vt-list"></div>
+      </div>
+    </div>
+    <div id="wbShops" style="display:none">
+      <div class="filter-tabs" id="shopTabs"></div>
+      <div class="shop-grid" id="shopGrid"></div>
+      <p class="src-note">🎨 声明：店铺信息由 AI 爬虫聚合全网旅行笔记与点评数据整理（地址 / 营业时间可能有变动，出行前请二次确认），顺路路线结合本站景点坐标规划。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 右下角 · 主题工坊 ============ -->
+<div class="theme-fab" id="themeFab">
+  <div class="tf-panel" id="themeDrop">
+    <h5>🎨 WANDERGO 主题工坊</h5>
+    <div class="tf-sec">预设主题</div>
+    <div class="tf-presets">
+      <button data-t="night" class="on"><i class="dot" style="background:#16294e"></i>星夜蓝</button>
+      <button data-t="dawn"><i class="dot" style="background:#e9ba5e"></i>晨曦暖阳</button>
+      <button data-t="mint"><i class="dot" style="background:#3fc492"></i>薄荷旅途</button>
+      <button data-t="sakura"><i class="dot" style="background:#f08cab"></i>樱粉列车</button>
+      <button data-t="aurora"><i class="dot" style="background:#a8e2ff"></i>极光冰蓝</button>
+    </div>
+    <div class="tf-sec">灵感色卡 · INS 风</div>
+    <div class="pal-cards" id="palIns"></div>
+    <div class="tf-sec">灵感色卡 · 国风</div>
+    <div class="pal-cards" id="palGf"></div>
+    <div class="tf-sec">自定义色轮 · 点击或拖动取色</div>
+    <div class="tf-wheelrow">
+      <div class="hue-wheel" id="hueWheel"><i id="wheelKnob"></i></div>
+      <div class="tf-wheelctl">
+        <label>饱和 <input type="range" id="cusS" min="25" max="95" value="62"></label>
+        <label>亮度 <input type="range" id="cusL" min="38" max="68" value="54"></label>
+        <div class="cp-modes" id="cpModes">
+          <button class="mini on" data-m="mono">单色系</button>
+          <button class="mini" data-m="comp">AI 互补</button>
+          <button class="mini" data-m="ana">邻近渐变</button>
+        </div>
+        <div class="cp-prev" id="cpPrev"></div>
+      </div>
+    </div>
+    <div class="tf-actions">
+      <button class="btn gold" id="cusApply">应用配色</button>
+      <button class="btn" id="aiPairBtn">🤖 AI 智能搭配</button>
+    </div>
+    <p class="tf-note">自定义配色即时全站生效 · 随时可切回 5 套预设主题</p>
+  </div>
+  <button class="fab-btn" id="themeBtn" title="主题工坊">🎨<i id="fabDot"></i></button>
+</div>
+
+<!-- ============ 全站搜索 ============ -->
+<div class="search-ov" id="searchOv">
+  <div class="search-box">
+    <div class="search-bar"><span>🔍</span><input id="searchInput" placeholder="搜视频 / Vlog / Plog / 书籍地点 / 景点 / 话题 / 文创店…"><button class="sr-esc" id="searchClose">ESC</button></div>
+    <div class="sr-quick" id="srQuick">
+      <button data-q="视频">▶ 视频</button><button data-q="vlog">🎬 Vlog</button><button data-q="plog">📷 Plog</button><button data-q="书籍">📖 书籍地点</button><button data-q="极光">🌌 极光</button><button data-q="文创">🎨 文创店</button>
+    </div>
+    <div class="sr-results" id="srResults"><div class="sr-empty">输入关键词，或点上方快捷标签开始探索 ✈️<br><span>试试：「洱海」「巴黎」「vlog」「悲惨世界」「极光」</span></div></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fb"><span class="tile" style="width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#f3da96,#c8973f);display:inline-grid;place-items:center">✈️</span>WANDERGO · Fly Me to the World</div>
+    <div class="fnote">让世界，成为你的下一站 · 原型演示 · 页面图片由 AI 生成 · 坐标来自高德坐标拾取器 · 主题可切换</div>
+  </div>
+</footer>
+
+<!-- ============ 弹窗根 ============ -->
+<div class="ovl" id="ovl"><div class="modal" id="modalBox"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js?v=1025"></script>
+<script src="js/app.js?v=1025"></script>
+</body>
+</html>
